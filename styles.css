@@ -1,0 +1,97 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fff;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #ffcccc;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 36px;
+    margin: 0;
+    color: #ff0080;
+}
+
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    color: #333;
+    text-decoration: none;
+    padding: 8px 16px;
+}
+
+nav a:hover {
+    background-color: #ff0080;
+    color: #fff;
+}
+
+main {
+    padding: 40px;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+section h2 {
+    font-size: 28px;
+    color: #ff0080;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 15px;
+}
+
+footer {
+    background-color: #ffcccc;
+    text-align: center;
+    padding: 20px;
+    color: #333;
+}
+
+/* Add a pink button style */
+.button-pink {
+    background-color: #ff0080;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Add custom styles for your portfolio items */
+.portfolio-item {
+    border: 1px solid #ff0080;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.portfolio-item h3 {
+    color: #ff0080;
+}
+
+.portfolio-item p {
+    color: #333;
+}
