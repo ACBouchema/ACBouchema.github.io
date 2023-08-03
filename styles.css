@@ -111,3 +111,14 @@ footer {
     height: 100%; /* Make the image fill the container */
     object-fit: cover; /* Maintain aspect ratio and cover the container */
 }
+
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links img {
+    width: 40px; /* Adjust the size of the icons as needed */
+    margin-right: 10px; /* Add some spacing between the icons */
+    cursor: pointer;
+}
