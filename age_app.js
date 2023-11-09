@@ -1,54 +1,39 @@
-$(document).ready(function(){
-    //$("#submit").click(
-    function(e){
-        //e.preventDefault();
-    
-        // var input = $("#dob-input").val();
-        var dob = new Date("21/03/1999");
-        save(dob);
-        renderAgeLoop();
-    }
-    //);
+$(document).ready(function () {
+    // Set a hardcoded date
+    var hardcodedDate = new Date("1990-01-01");
+    save(hardcodedDate);
+    renderAgeLoop();
 
-    function save(dob)
-    {
+    function save(dob) {
         localStorage.dob = dob.getTime();
     };
 
-    function load()
-    {
+    function load() {
         var dob;
-        if (dob = localStorage.getItem("dob"))
-        {
+        if (dob = localStorage.getItem("dob")) {
             return new Date(parseInt(dob));
         }
         return -1;
     };
 
-    function renderAgeLoop()
-    {
+    function renderAgeLoop() {
         var dob = load();
-        // $("#choose").css("display", "none");
+        $("#choose").css("display", "none");
         $("#timer").css("display", "block");
 
-        setInterval(function(){
+        setInterval(function () {
             var age = getAge(dob);
             $("#age").html(age.year + "<sup>." + age.ms + "</sup>");
         }, 100);
     };
 
-    function renderChoose()
-    {
-        $("#choose").css("display", "block");
-    };
+    function getAge(dob) {
+        var now = new Date;
+        var duration = now - dob;
+        var years = duration / 31556900000;
 
-    function getAge(dob){
-        var now       = new Date;
-        var duration  = now - dob;
-        var years     = duration / 31556900000;
-        
         var majorMinor = years.toFixed(9).toString().split('.');
-        
+
         return {
             "year": majorMinor[0],
             "ms": majorMinor[1]
@@ -56,18 +41,9 @@ $(document).ready(function(){
     };
 
     function main() {
-        var dob = new Date("1999-11-10");
-        save(dob);
-        renderAgeLoop();
-        
-        load();
-        renderChoose();
-        /*if (load() != -1)
-        {
+        if (load() != -1) {
             renderAgeLoop();
-        } else {
-            renderChoose();
-        }*/
+        }
     };
     main();
 });
