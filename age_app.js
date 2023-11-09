@@ -1,12 +1,14 @@
 $(document).ready(function(){
-    $("#submit").click(function(e){
-        e.preventDefault();
+    //$("#submit").click(
+    function(e){
+        //e.preventDefault();
     
         // var input = $("#dob-input").val();
         var dob = new Date("21/03/1999");
         save(dob);
         renderAgeLoop();
-    });
+    }
+    //);
 
     function save(dob)
     {
