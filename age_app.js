@@ -2,8 +2,8 @@ $(document).ready(function(){
     $("#submit").click(function(e){
         e.preventDefault();
     
-        var input = $("#dob-input").val();
-        var dob = new Date(input);
+        // var input = $("#dob-input").val();
+        var dob = new Date("21/03/1999");
         save(dob);
         renderAgeLoop();
     });
