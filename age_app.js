@@ -56,7 +56,7 @@ $(document).ready(function(){
     };
 
     function main() {
-        var dob = new Date("21/03/1999");
+        var dob = new Date("1999-11-10");
         save(dob);
         renderAgeLoop();
         
