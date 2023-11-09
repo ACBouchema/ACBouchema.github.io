@@ -28,7 +28,7 @@ $(document).ready(function(){
     function renderAgeLoop()
     {
         var dob = load();
-        $("#choose").css("display", "none");
+        // $("#choose").css("display", "none");
         $("#timer").css("display", "block");
 
         setInterval(function(){
@@ -56,12 +56,18 @@ $(document).ready(function(){
     };
 
     function main() {
-        if (load() != -1)
+        var dob = new Date("21/03/1999");
+        save(dob);
+        renderAgeLoop();
+        
+        load();
+        renderChoose();
+        /*if (load() != -1)
         {
             renderAgeLoop();
         } else {
             renderChoose();
-        }
+        }*/
     };
     main();
 });
